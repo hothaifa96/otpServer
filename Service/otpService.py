@@ -36,7 +36,7 @@ def build_message(language, patient_id):
         code = str(res[0])
         print('code ='+code)
         print('body = '+body)
-        body.replace('otp', code)
+        body = body.replace('{otp}',code)
         print(body)
         return body
 
@@ -55,4 +55,4 @@ def send_otp(id, phone_number, language):
 
     print(message.body)
 
-    return otp
+    return message.body
