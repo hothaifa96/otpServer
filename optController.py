@@ -21,4 +21,3 @@ def send_otp_api():
 
 
 app.run(host='0.0.0.0', port=5002)
-c
